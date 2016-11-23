@@ -61,7 +61,7 @@ exec i3wm & lbar  # or whatever WM/DE you use
 
 Or add a .bat file to your startup in Windows:
 
-```batch
+```batchfile
 lbar -c %APPDATA%\lbar\lbar.lua
 ```
 
