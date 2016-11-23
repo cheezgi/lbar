@@ -10,7 +10,7 @@ callbacks. In ~/.lbar.lua
 likely be added later, documentation will likely come never unless someone
 makes a nice PR. wink wink hint hint.)
 
-```
+```lua
 -- lbar is a global when this script is run
 -- this script is run once at startup, all other stuff comes in the form
 -- of a callback.
