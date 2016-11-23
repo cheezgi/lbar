@@ -3,12 +3,15 @@
 Short for lua bar. A simple cross-platform solution for all window managers
 and no dependencies on finicky X11 libraries.
 
+It even works in Windows!
+
 An example `~/.lbar.lua` that demonstrates lbar functionality
 
 ```lua
 lbar:setHeight(30)                     -- height of bar
 --lbar:monWidth(1900)                  -- monitor width: lbar tries to guess
 --lbar:monHeight(600)                  -- monitor height
+--lbar:setCoords(0, 1900 - 30)         -- should not need to do this
 lbar:setFont("dir/to/font.ttf")        -- font for all text
 lbar:setLog("/tmp/lbar_log.txt")       -- set log file
 
@@ -52,7 +55,13 @@ The `lbar` object is a global provided when your `lbar.lua` is `require()`d.
 When you start your window manager, you need to start up lbar. You can do this
 via .xinitrc:
 
-```
+```sh
 exec i3wm & lbar  # or whatever WM/DE you use
+```
+
+Or add a .bat file to your startup in Windows:
+
+```bat
+lbar -c %APPDATA%\lbar\lbar.lua
 ```
 
