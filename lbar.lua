@@ -17,9 +17,13 @@ function LBar.new()
     self.xcoord = 0
     self.ycoord = 0
     self.color = {255, 255, 255}
-    self.font = love.grahpics.newFont(18)
+    self.font = love.graphics.newFont(18)
     self.log = nil
     return self
+end
+
+function LBar:setDisplay(d)
+    self.display = d
 end
 
 function LBar:setHeight(h)

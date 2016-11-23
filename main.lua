@@ -6,11 +6,13 @@ ml = require("ml")
 function love.load()
     lbar = LBar.new()
     if ml.exists(os.getenv("HOME") .. "/.lbar.lua") then
-        require("~/.lbar.lua")
+        dofile(os.getenv("HOME") .. "/.lbar.lua")
     else
         print("config file not found!")
     end
     print(ml.tstring(lbar))
+    love.window.setMode(lbar.width, lbar.height, {borderless = true})
+    love.window.setPosition(lbar.xcoord, lbar.ycoord, lbar.display)
 end
 
 function love.update(dt)
