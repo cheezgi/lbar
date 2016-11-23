@@ -53,6 +53,6 @@ When you start your window manager, you need to start up lbar. You can do this
 via .xinitrc:
 
 ```
-lbar & exec i3wm  # or whatever WM/DE you use
+exec i3wm & lbar  # or whatever WM/DE you use
 ```
 
