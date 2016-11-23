@@ -15,6 +15,8 @@ lbar:setHeight(30)                     -- height of bar
 lbar:setFont("dir/to/font.ttf")        -- font for all text
 lbar:setLog("/tmp/lbar_log.txt")       -- set log file
 
+lbar:setColor(244, 194, 66)            -- set color
+
 -- weather thingy
 lbar:newArea({
     pos = 399,                         -- position in pixels from the left side
