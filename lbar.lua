@@ -1,3 +1,5 @@
+require("larea")
+
 LBar = {}
 LBar.__index = LBar
 
