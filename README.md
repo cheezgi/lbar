@@ -40,7 +40,7 @@ lbar:newArea({
 
 -- music
 lbar:newArea({
-    cmd = "getmusicplaying", -- media player command or something
+    settext = "getmusicplaying", -- media player command or something
     onclick = function(x, y, b)
         -- launch some music widget or whatever
     end,
