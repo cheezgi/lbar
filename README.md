@@ -17,7 +17,10 @@ lbar:newArea({
     --left = true,                     -- or left justify
     --right = true,                    -- or right justify
     --centered = true,                 -- or center
-    width = 100,                       -- width in pixels
+
+    height = 100,                      -- height in pixels
+    --mwidth = 1600                    -- specify monitor width if needed
+    --mheight = 900                    -- specify height if needed
 
     background = {62, 94, 65},         -- dark green
     foreground = {0, 0, 0},            -- font color
@@ -46,4 +49,11 @@ lbar:newArea({
 ```
 
 The `lbar` object is a global provided when your `lbar.lua` is `require()`d.
+
+When you start your window manager, you need to start up lbar. You can do this
+via .xinitrc:
+
+```
+lbar & exec i3wm  # or whatever WM/DE you use
+```
 
