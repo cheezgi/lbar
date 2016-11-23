@@ -7,7 +7,8 @@ An example `~/.lbar.lua` that demonstrates lbar functionality
 
 ```lua
 lbar:setHeight(30)                     -- height of bar
-lbar:setWidth(1900)                    -- monitor width
+--lbar:monWidth(1900)                  -- monitor width: lbar tries to guess
+--lbar:monHeight(600)                  -- monitor height
 lbar:setFont("dir/to/font.ttf")        -- font for all text
 lbar:setLog("/tmp/lbar_log.txt")       -- set log file
 
@@ -17,10 +18,7 @@ lbar:newArea({
     --left = true,                     -- or left justify
     --right = true,                    -- or right justify
     --centered = true,                 -- or center
-
-    height = 100,                      -- height in pixels
-    --mwidth = 1600                    -- specify monitor width if needed
-    --mheight = 900                    -- specify height if needed
+    width = 100,                       -- width in pixels
 
     background = {62, 94, 65},         -- dark green
     foreground = {0, 0, 0},            -- font color
@@ -35,6 +33,7 @@ lbar:newArea({
 
     onclick = function(x, y, b)        -- callback provides x, y, and button
         print("Look out the window!")
+        -- could do system call out to notification system
     end,
 })
 
