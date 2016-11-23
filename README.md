@@ -56,7 +56,8 @@ When you start your window manager, you need to start up lbar. You can do this
 via .xinitrc:
 
 ```sh
-exec i3wm & lbar  # or whatever WM/DE you use
+lbar &     # start lbar in background
+exec i3wm  # or whatever WM/DE you use
 ```
 
 Or add a .bat file to your startup in Windows:
