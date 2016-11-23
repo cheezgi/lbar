@@ -23,10 +23,12 @@ lbar:newArea({
     onclick = function(x, y, b)        -- callback provides x, y, and button
         print("Look out the window!")
     end,
-    setpic = "getweather"              -- command to set picture
+    setpic = "getweather",             -- command to set picture
+    --setpic = getpic,                 -- or pass a lua function
+    --pic = "sun.png",                 -- alternatively set picture manually
     settext = "date",                  -- command to run to get text
-    --settext = gettext                -- or pass a lua function
-    --settext = "Weather"              -- alternatively set text manually:
+    --settext = gettext,               -- or pass a lua function
+    --text = "Weather",                -- alternatively set text manually
     interval = 1,                      -- interval to run cmdstring in seconds
     pos = lbar:getWidth() / 2,         -- position in pixels from the left side
     width = 100,                       -- width in pixels
