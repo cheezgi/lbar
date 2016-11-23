@@ -9,13 +9,13 @@ setmetatable(LBar, {
     end
 })
 
-function LBar.new(h, mw, x, y)
+function LBar.new()
     local self = setmetatable({}, LBar)
     self.areas = {}
-    self.height = h
-    self.width = mw
-    self.xcoord = x
-    self.ycoord = y
+    self.height = 20
+    self.width = 400
+    self.xcoord = 0
+    self.ycoord = 0
     self.color = {255, 255, 255}
     self.font = love.grahpics.newFont(18)
     self.log = nil
