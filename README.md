@@ -14,8 +14,8 @@ lbar:setLog("/tmp/lbar_log.txt")       -- set log file
 -- weather thingy
 lbar:newArea({
     pos = 399,                         -- position in pixels from the left side
-    --leftjust = true,                 -- or left justify
-    --rightjust = true,                -- or right justify
+    --left = true,                     -- or left justify
+    --right = true,                    -- or right justify
     --centered = true,                 -- or center
     width = 100,                       -- width in pixels
 
